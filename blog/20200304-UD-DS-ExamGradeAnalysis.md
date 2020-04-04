@@ -1,4 +1,4 @@
-![Title Image](./20200304_assets/exam-s.png) 
+![Title Image](./20200304_assets/exam.png) 
 # Can You Guess What Your Students Final Exam Grad Will Be? 
  
 *Publishing date: 2020-03-04*
