@@ -1,4 +1,6 @@
-![Title Image](./20200304_assets/exam.png) 
+<p align="center">
+	<img alt="Title Image" src="./20200304_assets/exam.png"/> 
+</p>
 # Can You Guess What Your Students Final Exam Grad Will Be? 
  
 *Publishing date: 2020-03-04*
