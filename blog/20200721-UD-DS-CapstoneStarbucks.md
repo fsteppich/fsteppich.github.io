@@ -251,9 +251,11 @@ neat and symmetric pattern of the offer type if you look up and down from the 6t
 (time to view) or 4th and 5th (time to complete, ignoring informational offers).
 
 Mean Time to View:
+
 ![Mean Time to View](./20200721_assets/timeline-mean_time_to_view.png)
 
 Mean Time to Complete:
+
 ![Mean Time to Complete](./20200721_assets/timeline-mean_time_to_complete.png)
 
 #### Offer State

@@ -6,7 +6,7 @@
 > Data Scientist, feel free to read any of my published blog posts:
 >
 > * [Exam Grade Analysis](/blog/20200304-UD-DS-ExamGradeAnalysis)
-> * [Udacity Data Scientist Capstone Project - Starbucks](/blog/20200719-UD-DS-CapstoneStarbucks)
+> * [Udacity Data Scientist Capstone Project - Starbucks](/blog/20200721-UD-DS-CapstoneStarbucks)
 > 
 > And when you are done, enjoy yourself and stay tuned.
 
