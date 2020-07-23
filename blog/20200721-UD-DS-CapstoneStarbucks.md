@@ -459,10 +459,23 @@ A grid search is applied to find the best parameters for each classifier. And th
 set got split between a training set (containing 57207 records) and a test set (containing
 19070 records).
 
-The best training score on the target `offer state` was calculated for the 
-`RandomForestClassifier` with a weighted average f1-score of 0.58. The overall best 
-training f1-score (weighted average) of 0.69 got calculated on the target `engaged` 
-for the `RandomForestClassifier`. 
+As Starbucks wants to sell products to as many customers as possible. One of the best 
+ways to engage users is to make offers. But this is always associated with costs that 
+should be kept to a minimum. On the other hand, money made by engaging a customer 
+outweighs the costs of an offer. Therefore, I would rather make an offer than to miss 
+a customer. 
+    
+Translating this into machine learning metrics: false positives (type I error) are 
+acceptable whereas false negatives (type II error) should be kept low. False-positive 
+means, a user gets predicted to be engaged even if the data says he is not. 
+False-negative means, a user gets predicted to be not engaged even if the data says he 
+is. Therefore I will aim for a low *precision* (close to 0) and a high *recall* 
+(close to 1). 
+
+The best training scores on the target `offer state` was calculated for the 
+`KNeighborsClassifier` with a weighted average of recall = 0.57 and precision = 0.57.
+The overall best scores of recall = 0.69 and precision = 0.68 got calculated on the 
+target `engaged` for the `DecisionTreeClassifier` and `RandomForestClassifier`.
 
 All trained models got stored/pickled in corresponding files for later usage.
 
@@ -473,18 +486,19 @@ To get a sense of the scores obtainable by a naive classification approach I imp
 a classifier based on the empirical distribution of the targets. This classifier assigned
 the target class solely by the fitted distribution.
 
-On `offer state`, `DecisionTreeClassifier` and `RandomForestClassifier` scored equally 
-with a weighted average f1-score of 0.57. But these were only slightly better than 
-`KNeighborsClassifier` with a weighted average f1-score of 0.54. 
+On `offer state` `DecisionTreeClassifier` scored the best with weighted averages of 
+recall = 0.58 and precision = 0.58. But these were only slightly better than 
+`KNeighborsClassifier` with weighted averages of recall = 0.55 and precision = 0.55. 
 
-On `engaged`, `DecisionTreeClassifier` had the highest weighted average f1-score of 
-0.68, closely followed by `RandomForestClassifier` with 0.67. But these were only 
-slightly better than `KNeighborsClassifier` with a weighted average f1-score of 0.64. 
+On `engaged` `RandomForestClassifier` had the best weighted averages of recall = 0.68 
+and precision = 0.67. Closely followed by `KNeighborsClassifier` with recall = 0.66 and 
+precision = 0.65. But these were only slightly better than `DecisionTreeClassifier` 
+with weighted averages of recall = 0.68 and precision = 0.68. 
 
-Both are better than the naive approach of randomly assigning the target class according 
-to the empirical distribution. Therefore I recommend using the `DecisionTreeClassifier` 
-to predict user engagement, as this classifier scores equally well and is 
-computationally less expensive than the `RandomForestClassifier`.
+All three classifiers are better than the naive approach of randomly assigning the 
+target class according to the empirical distribution. Therefore I recommend using the 
+`DecisionTreeClassifier` to predict user engagement, as this classifier has better 
+precision and recall scores for the value 1 (true) of the target `engaged`.
 
 
 ## Next Actions
